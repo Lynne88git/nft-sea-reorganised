@@ -17,14 +17,14 @@ body {
 }
 
 body {
-  background-image: url("../public/static/background.png");
+  background-image: url('../public/static/background.png');
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   height: 100%;
-  font-family: "Cinzel", serif;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Cinzel', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -37,7 +37,7 @@ a {
 }
 
 .lg-heading {
-  font-family: "Cinzel";
+  font-family: 'Cinzel';
   font-style: normal;
   font-weight: 700;
   font-size: 44px;
@@ -55,7 +55,7 @@ a {
 }
 
 .cinzel {
-  font-family: "Cinzel";
+  font-family: 'Cinzel';
 }
 
 .c-width {
