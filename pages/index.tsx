@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Profile from '@/components/user-profile/Profile'
 
 export default function Home() {
   const router = useRouter()
-  const [account, setAccount] = useState()
 
   return (
     <>
@@ -17,7 +15,10 @@ export default function Home() {
       </Head>
 
       <div className="absolute flex flex-col items-center justify-center w-full">
-        Your Account: {account}
+        <Profile />
+        <div>
+          <h2>Your NFTs:</h2>
+        </div>
       </div>
     </>
   )
