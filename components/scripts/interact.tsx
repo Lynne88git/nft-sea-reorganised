@@ -2,14 +2,14 @@
 // import dotenv from 'dotenv'
 // dotenv.config()
 
-// interact.js
+
 
 // const NEXT_PUBLIC_ALCHEMY_API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY
 // const NEXT_PRIVATE_KEY_METAMASK = process.env.NEXT_PRIVATE_KEY_METAMASK
 // const NEXT_PUBLIC_NFT_ADDRESS = process.env.NEXT_PUBLIC_NFT_ADDRESS
 
 // const contract = require('../artifacts/contracts/HelloWorld.sol/HelloWorld.json')
-
+// interact.js
 // const ABI =
 //   'https://github.com/LinumLabs/web3-task-abi/blob/dev/Musharka721.json'
 

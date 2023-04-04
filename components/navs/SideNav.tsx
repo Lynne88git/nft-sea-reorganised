@@ -1,25 +1,26 @@
-import { useState } from "react";
-import Image from "next/image";
-import Logo from "../../public/static/logo.svg";
-import Close from "../../public/static/close.svg";
-//import { WalletConnectMetamask } from "../WalletConnect/WalletConnectMetamask";
+import { useState } from 'react'
+import Image from 'next/image'
+import Logo from '../../public/static/logo.svg'
+import Close from '../../public/static/close.svg'
+import WalletConnectMetamask from '../wallet/WalletConnectMetamask'
+import { Web3Provider } from '@ethersproject/providers'
 
 export interface SideNavProps {
-  isNavOpen: boolean;
-  setIsNavOpen: (isOpen: boolean) => void;
-  navItems: NavItem[];
+  isNavOpen: boolean
+  setIsNavOpen: (isOpen: boolean) => void
+  navItems: NavItem[]
 }
 
 export interface NavItem {
-  label: string;
-  href: string;
-  icon: React.ReactElement;
+  label: string
+  href: string
+  icon: React.ReactElement
 }
 
 const SideNav = ({ isNavOpen, setIsNavOpen, navItems }: SideNavProps) => {
   const handleNavClose = () => {
-    setIsNavOpen(false);
-  };
+    setIsNavOpen(false)
+  }
 
   return (
     <>
@@ -34,7 +35,7 @@ const SideNav = ({ isNavOpen, setIsNavOpen, navItems }: SideNavProps) => {
       {/* The SideNav content */}
       <aside
         className={`fixed inset-y-0 right-0 z-50 flex-shrink-0 w-64 transition duration-300 transform bg-black w-96 ${
-          isNavOpen ? "translate-x-0" : "translate-x-full"
+          isNavOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="pl-6 flex-col justify-between w-full">
@@ -56,7 +57,7 @@ const SideNav = ({ isNavOpen, setIsNavOpen, navItems }: SideNavProps) => {
         </div>
         <nav className="px-12 pb-8 flex-col items-start">
           <div className="">
-            <button>Connect Metamask</button>
+            <WalletConnectMetamask />
           </div>
 
           <p className="py-4  font-normal">
@@ -68,7 +69,7 @@ const SideNav = ({ isNavOpen, setIsNavOpen, navItems }: SideNavProps) => {
         </nav>
       </aside>
     </>
-  );
-};
+  )
+}
 
-export default SideNav;
+export default SideNav

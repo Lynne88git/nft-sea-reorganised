@@ -1,4 +1,4 @@
-import CreateNFTForm from '../components/minting/Create_NFT'
+import CreateNFTForm from '../components/minting/Create_NFT_Form'
 import { useRouter } from 'next/router'
 
 const Minting = () => {
