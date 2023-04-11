@@ -1,29 +1,29 @@
-import { useState, ReactNode } from "react";
-import MainNav from "../navs/MainNav";
-import SideNav from "../navs/SideNav";
-import Footer from "../navs/Footer";
-import { DefaultNavItems } from "../navs/DefaultNavItems";
-import { MainNavProps } from "../navs/MainNav";
-import { SideNavProps } from "../navs/SideNav";
+import { useState, ReactNode } from 'react'
+import MainNav from '../navs/MainNav'
+import SideNav from '../navs/SideNav'
+import Footer from '../navs/Footer'
+import { DefaultNavItems } from '../navs/DefaultNavItems'
+import { MainNavProps } from '../navs/MainNav'
+import { SideNavProps } from '../navs/SideNav'
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   const mainNavProps: MainNavProps = {
     isNavOpen,
     setIsNavOpen,
     navItems: DefaultNavItems,
-  };
+  }
 
   const sideNavProps: SideNavProps = {
     isNavOpen,
     setIsNavOpen,
     navItems: DefaultNavItems,
-  };
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

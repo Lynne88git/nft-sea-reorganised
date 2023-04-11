@@ -13,15 +13,11 @@ export default function App({ Component, pageProps }: AppProps) {
     network: [Goerli],
     readOnlyChainId: Goerli.chainId,
     readOnlyUrls: {
-      [Mainnet.chainId]: getDefaultProvider('mainnet'),
       [Goerli.chainId]:
         'https://goerli.infura.io/v3/b1f214a6ed164748bbb9be2961bb9b45',
     },
-    notifications: {
-      expirationPeriod: 1000,
-      checkInterval: 1000,
-    },
   }
+
   return (
     <DAppProvider config={config}>
       <ApolloProvider client={client}>

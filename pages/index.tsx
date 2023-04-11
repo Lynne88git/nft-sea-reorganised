@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Profile from '@/components/user-profile/Profile'
+//import ABI from '@/components/abi/ABI'
+//import Contract from '@/components/contract/contract'
+//import { connectToContract } from '@/components/wallet/MetamaskSmartContract'
 
 export default function Home() {
   const router = useRouter()
@@ -15,9 +18,11 @@ export default function Home() {
       </Head>
 
       <div className="absolute flex flex-col items-center justify-center w-full">
-        <Profile />
         <div>
-          <h2>Your NFTs:</h2>
+          <h2>
+            {' '}
+            <Profile />
+          </h2>
         </div>
       </div>
     </>

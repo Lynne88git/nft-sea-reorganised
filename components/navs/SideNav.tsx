@@ -2,8 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Logo from '../../public/static/logo.svg'
 import Close from '../../public/static/close.svg'
-import WalletConnectMetamask from '../wallet/WalletConnectMetamask'
-import { Web3Provider } from '@ethersproject/providers'
+import MetamaskConnect from '@/components/wallet/MetamaskConnect'
 
 export interface SideNavProps {
   isNavOpen: boolean
@@ -57,7 +56,7 @@ const SideNav = ({ isNavOpen, setIsNavOpen, navItems }: SideNavProps) => {
         </div>
         <nav className="px-12 pb-8 flex-col items-start">
           <div className="">
-            <WalletConnectMetamask />
+            <MetamaskConnect />
           </div>
 
           <p className="py-4  font-normal">
